@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
@@ -46,6 +47,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Theme.of(context).brightness == Brightness.light
+                ? Icons.lightbulb_outline
+                : Icons.highlight),
+            onPressed: () {
+              DynamicTheme.of(context).setBrightness(
+                  Theme.of(context).brightness == Brightness.light
+                      ? Brightness.dark
+                      : Brightness.light);
+            },
+          )
+        ],
         centerTitle: true,
         title: Text('Covid-19 Tracker'),
       ),
@@ -105,7 +119,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             worldData == null
-                ? CircularProgressIndicator()
+                ? Center(child: CircularProgressIndicator())
                 : WorldWidePanel(
                     worldData: worldData,
                   ),
