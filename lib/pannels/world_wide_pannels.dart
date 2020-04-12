@@ -3,6 +3,10 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 
 class WorldWidePanel extends StatelessWidget {
+  final Map worldData;
+
+  const WorldWidePanel({Key key, this.worldData}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GridView(
@@ -17,25 +21,25 @@ class WorldWidePanel extends StatelessWidget {
           title: 'CONFIRMED',
           panelColor: Colors.red[100],
           textColor: Colors.red,
-          count: '1234',
+          count: worldData['cases'].toString(),
         ),
         StatusPanel(
           title: 'ACTIVE',
           panelColor: Colors.green[100],
           textColor: Colors.green,
-          count: '1234',
+          count: worldData['active'].toString(),
         ),
         StatusPanel(
           title: 'RECOVERED',
           panelColor: Colors.teal[100],
           textColor: Colors.teal,
-          count: '1234',
+          count: worldData['recovered'].toString(),
         ),
         StatusPanel(
-          title: 'CONFIRMED',
+          title: 'DEATHS',
           panelColor: Colors.grey[350],
           textColor: Colors.grey[900],
-          count: '1234',
+          count: worldData['deaths'].toString(),
         ),
       ],
     );
