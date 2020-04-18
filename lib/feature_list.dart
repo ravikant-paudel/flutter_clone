@@ -16,51 +16,96 @@ class FeatureList extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                child: Text('Clock'),
+                child: Text(
+                  'Clock',
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                color: Color(0xffff5e92),
+                textColor: Colors.white,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => AppClock()),
                   );
                 },
-                textColor: Colors.white,
-                color: Colors.teal,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                child: Text('A'),
-                onPressed: () {},
+                child: Text(
+                  'A',
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                color: Color(0xffff5e92),
                 textColor: Colors.white,
-                color: Colors.teal,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                onPressed: () {},
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                child: Text('C'),
-                onPressed: () {},
+                child: Text(
+                  'C',
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                color: Color(0xffff5e92),
                 textColor: Colors.white,
-                color: Colors.teal,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                onPressed: () {},
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                child: Text('D'),
-                onPressed: () {},
+                child: Text(
+                  'D',
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                color: Color(0xffff5e92),
                 textColor: Colors.white,
-                color: Colors.teal,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                onPressed: () {},
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                child: Text('E'),
-                onPressed: () {},
+                child: Text(
+                  'E',
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                color: Color(0xffff5e92),
                 textColor: Colors.white,
-                color: Colors.teal,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                onPressed: () {},
               ),
             ),
           ],

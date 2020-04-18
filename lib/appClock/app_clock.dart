@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 
 import 'screen/first_tab.dart';
+import 'screen/second_tab.dart';
 
 class AppClock extends StatelessWidget {
   @override
@@ -51,16 +52,16 @@ class AppClock extends StatelessWidget {
                             ),
                           ),
                           Tab(
-                            text: 'ALARMS',
+                            text: 'RECORDS',
                             icon: Icon(
-                              Icons.watch_later,
+                              Icons.dehaze,
                               size: 40,
                             ),
                           ),
                           Tab(
-                            text: 'ALARMS',
+                            text: 'PROFILE',
                             icon: Icon(
-                              Icons.watch_later,
+                              Icons.supervised_user_circle,
                               size: 40,
                             ),
                           ),
@@ -77,8 +78,10 @@ class AppClock extends StatelessWidget {
               Center(
                 child: FirstTab(),
               ),
-              Text('2st'),
-              Text('3st'),
+              Center(
+                child: SecondTab(),
+              ),
+              Center(child: Text('Waiting for Design')),
             ],
           ),
         ),

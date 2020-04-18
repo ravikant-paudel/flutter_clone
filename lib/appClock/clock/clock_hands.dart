@@ -38,7 +38,7 @@ class ClockHands extends StatelessWidget {
 }
 
 //class _ClockHandState extends State<ClockHands> {
-Timer _timer;
+//Timer _timer;
 //
 //  _ClockHandState();
 //
