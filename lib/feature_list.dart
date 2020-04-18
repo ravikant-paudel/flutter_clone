@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutterclone/appClock/app_clock.dart';
+import 'package:flutterclone/appPiano/app_piano.dart';
+
+import 'appCompass/app_compass.dart';
 
 class FeatureList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Select App'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -40,7 +40,7 @@ class FeatureList extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 child: Text(
-                  'A',
+                  'Compass',
                   style: TextStyle(
                     letterSpacing: 1.5,
                   ),
@@ -51,14 +51,19 @@ class FeatureList extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AppCompass()),
+                  );
+                },
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 child: Text(
-                  'C',
+                  'Paino Game',
                   style: TextStyle(
                     letterSpacing: 1.5,
                   ),
@@ -69,7 +74,12 @@ class FeatureList extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AppPiano()),
+                  );
+                },
               ),
             ),
             Padding(
