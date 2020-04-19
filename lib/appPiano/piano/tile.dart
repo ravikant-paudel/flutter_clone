@@ -4,16 +4,20 @@ import 'package:flutterclone/appPiano/model/note.dart';
 class Tile extends StatelessWidget {
   final NoteState state;
   final double height;
+  final VoidCallback onTap; //<--new parameter
 
-  const Tile({Key key, this.state, this.height}) : super(key: key);
+  const Tile({Key key, this.state, this.height, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       height: height,
-      child: Container(
-        color: color,
+      child: GestureDetector(
+        onTapDown: (_) => onTap(), //<-- call onTap
+        child: Container(
+          color: color,
+        ),
       ),
     );
   }
