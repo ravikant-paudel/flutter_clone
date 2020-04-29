@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutterclone/appBlock/app_block.dart';
 import 'package:flutterclone/appClock/app_clock.dart';
 import 'package:flutterclone/appPiano/app_piano.dart';
 
 import 'appCompass/app_compass.dart';
+import 'appParallax/app_parallax.dart';
 
 class FeatureList extends StatelessWidget {
   @override
@@ -86,7 +88,7 @@ class FeatureList extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 child: Text(
-                  'D',
+                  'Parallax Scrolling',
                   style: TextStyle(
                     letterSpacing: 1.5,
                   ),
@@ -97,14 +99,19 @@ class FeatureList extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AppParallax()),
+                  );
+                },
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 child: Text(
-                  'E',
+                  'AppBlock',
                   style: TextStyle(
                     letterSpacing: 1.5,
                   ),
@@ -115,7 +122,12 @@ class FeatureList extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AppBlock()),
+                  );
+                },
               ),
             ),
           ],

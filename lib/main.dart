@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'feature_list.dart';
 
-void main() => runApp(MyApp());
+void main() {
+//  WidgetsFlutterBinding.ensureInitialized();
+//  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft])
+//      .then((_) {
+  runApp(MyApp());
+//  });
+}
 
 class MyApp extends StatelessWidget {
   @override
