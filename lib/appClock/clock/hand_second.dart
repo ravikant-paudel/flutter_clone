@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class SecondHandPainter extends CustomPainter {
   final Paint secondHandPaint;
@@ -36,6 +37,8 @@ class SecondHandPainter extends CustomPainter {
 
     path2.addOval(
         new Rect.fromCircle(radius: 5.0, center: new Offset(0.0, 0.0)));
+
+//    path2.addOval(new Rect.fromCircle(Offset:new  Offset(0.0, 0.0)));
 
     canvas.drawPath(path1, secondHandPaint);
     canvas.drawPath(path2, secondHandPointsPaint);

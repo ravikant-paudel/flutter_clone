@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutterclone/appBlock/app_block.dart';
 import 'package:flutterclone/appClock/app_clock.dart';
 import 'package:flutterclone/appEnglish/app_english.dart';
+import 'package:flutterclone/appHooks/app_hooks.dart';
 import 'package:flutterclone/appPiano/app_piano.dart';
 
 import 'appCompass/app_compass.dart';
@@ -150,6 +151,29 @@ class FeatureList extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => AppEnglish()),
+                  );
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RaisedButton(
+                child: Text(
+                  'Hooks Example',
+                  style: TextStyle(
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                color: Color(0xffff5e92),
+                textColor: Colors.white,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AppHooks()),
                   );
                 },
               ),
